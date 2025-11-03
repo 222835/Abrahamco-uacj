@@ -1,0 +1,27 @@
+[
+  {
+    "id": "A1001",
+    "owner": "Maria Garcia",
+    "balance": 1500.5,
+    "is_active": true,
+    "transactions": [
+      {
+        "date": "2025-10-25",
+        "amount": -200.0,
+        "description": "Compra Amazon"
+      },
+      {
+        "date": "2025-10-28",
+        "amount": 500.0,
+        "description": "Deposito Salario"
+      }
+    ]
+  },
+  {
+    "id": "B2002",
+    "owner": "Juan Perez",
+    "balance": 50.0,
+    "is_active": false,
+    "transactions": []
+  }
+]
