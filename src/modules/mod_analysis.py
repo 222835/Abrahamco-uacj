@@ -9,7 +9,19 @@ def get_total_income(account_id: str) -> float:
 
 def get_total_expenses(account_id: str) -> float:
     """HU 4.2: Suma solo las transacciones negativas (gastos). Retorna un valor positivo."""
-    pass
+    account = get_account(account_id)
+    
+    if account is None:
+        return 0.0
+    
+    total_expenses = 0.0
+    
+    for transaction in account.get("transactions", []):
+        amount = transaction.get("amount", 0.0)
+        if amount < 0:
+            total_expenses += abs(amount)
+    
+    return total_expenses
 
 
 def count_transactions(account_id: str) -> int:
